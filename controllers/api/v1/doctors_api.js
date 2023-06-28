@@ -41,6 +41,7 @@ module.exports.login = async (req, res) => {
             });
         }
         const token = doctor.getSignedJwtToken();
+        console.log(token);
         res.status(200).json({
             success: true,
             message: `Log in successfully~ keep the token safely ${doctor.username}~`,
